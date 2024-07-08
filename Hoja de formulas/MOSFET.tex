@@ -1,0 +1,87 @@
+\section{MOSFET}
+\capequation{Relación entre tensiones}
+\begin{equation}
+    V_{DS\;(SAT)} = V_{GS} - V_T 
+\end{equation}
+
+\capequation{Condiciones de polarización NMOS}
+
+\begin{equation*}
+Corte: \quad \begin{cases}
+    V_{GS} < V_T \\
+    I_D = 0
+\end{cases} \\
+\end{equation*}
+\begin{equation*}
+  Triodo:\begin{cases}
+    V_{GS} > V_T \\
+    V_{DS} < V_{DS\;(SAT)} \\
+    I_D = K'_n\frac{W}{L}\left[V_{DS\;(SAT)} - \frac{V_{DS}}{2}\right]V_{DS}
+\end{cases} \\  
+\end{equation*}
+
+\begin{equation*}
+    Saturacion\begin{cases}
+    V_{GS} > V_T \\
+    V_{DS} > V_{DS\;(SAT)} \\
+    I_D = \frac{K'_n}{2}\frac{W}{L}\left[V_{DS\;(SAT)}\right]^2
+\end{cases}
+\end{equation*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\capequation{Condiciones de polarización PMOS}
+
+\begin{equation*}
+    Corte\begin{cases}
+    V_{GS} > V_T \\
+    I_D = 0
+\end{cases} \\
+\end{equation*}
+\begin{equation*}
+    Triodo\begin{cases}
+    V_{GS} < V_T \\
+    V_{DS} > V_{DS\;(SAT)} \\
+    I_D = -K'_p\frac{W}{L}\left[V_{DS\;(SAT)} - \frac{V_{DS}}{2}\right]V_{DS}
+\end{cases} \\
+\end{equation*}
+
+
+\begin{equation*}
+    Saturacion\begin{cases}
+    V_{GS} < V_T \\
+    V_{DS} < V_{DS\;(SAT)} \\
+    I_D = -\frac{K'_p}{2}\frac{W}{L}\left[V_{DS\;(SAT)}\right]^2
+\end{cases}
+\end{equation*}
+
+\capequation{Efecto de modulación del largo del canal}
+\begin{equation*}
+    I_D \cdot (1+\lambda V_{DS})
+\end{equation*}
+
+\capequation{Back-Gate NMOS}
+\begin{equation}
+    V_{T} = V_{T0} + \gamma{\left[\sqrt{\left(-2\phi_p - V_{BS}\right)} - \sqrt{\left( -2\phi_p\right)}  \right]} 
+\end{equation}
+
+\capequation{Back-Gate PMOS}
+\begin{equation}
+    V_{T} = V_{T0} - \gamma{\left[\sqrt{2\phi_n - V_{BS}} - \sqrt{2\phi_n}\right]} 
+\end{equation}
+
+\subsection{Modelo de pequeña señal MOSFET}
+
+\capequation{Validez del MPS}
+\begin{equation*}
+    v_{gs} < \frac{V_{GS} - V_T}{5}
+\end{equation*}
+
+\capequation{Transconductancia de salida}
+\begin{equation}
+    g_m = \frac{\partial i_D}{\partial v_{GS}} \Bigg|_Q = K'_n\frac{W}{L}\left(V_{DS(SAT)}\right) \cdot (1+\lambda V_{DS})
+\end{equation}
+
+\capequation{Conductancia de salida}
+\begin{equation}
+    g_o = \frac{\partial i_D}{\partial v_{DS}} \Bigg|_Q = \lambda \cdot I_{D(SAT)}
+\end{equation}

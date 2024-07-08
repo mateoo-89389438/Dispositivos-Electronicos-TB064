@@ -1,0 +1,93 @@
+\section{Amplificadores}
+
+\subsection{Parámetros teóricos}
+Parámetros del amplificador sin fuente de señal. 
+
+\capequation{Ganancia en tensión sin carga}
+
+\begin{itemize}
+    \item Es la ganancia de tensión a \textit{circuito abierto}, es decir, sin conectar nada a la salida.
+\end{itemize}
+\begin{equation}
+    A_{v0} = \frac{v_{out}}{v_{in}} 
+\end{equation}
+
+\capequation{Ganancia en tensión con carga}
+\begin{itemize}
+    \item Es la ganancia de tensión con carga a la salida.
+\end{itemize}
+\begin{equation}
+    A_{v} = \frac{v_{out}}{v_{in}} \Bigg|_{R_L}
+\end{equation}
+
+\subsection{Parámetros en funcionamiento}
+Parámetros del amplificador con carga y fuente de señal. 
+
+\capequation{Ganancia de señal}
+\begin{itemize}
+    \item Es la ganancia de tensión considerando la resistencia interna de la fuente de señal.
+\end{itemize}
+\begin{equation}
+    A_{vs} = \frac{v_{out}}{v_{sig}} = A_{v} \cdot \frac{R_{in}}{R_s + R_{in}}
+\end{equation}
+
+\capequation{Resistencia de entrada}
+\begin{itemize}
+    \item Es la resistencia vista desde la entrada del amplificador. 
+\end{itemize}
+\begin{equation}
+    R_{in} = \frac{v_{in}}{i_{in}}
+\end{equation}
+
+\capequation{Resistencia de entrada}
+\begin{itemize}
+    \item Es la resistencia vista desde la salida del amplificador. 
+\end{itemize}
+\begin{equation}
+    R_{out} = \frac{v_{out}}{i_{out}}
+\end{equation}
+
+
+
+\subsection{Distorsiones para transistor TBJ}
+
+Si se cumplen las siguientes condiciones el amplificador no distorsiona:
+
+\capequation{Distorsión por alinealidad}
+\begin{equation}
+    v_{be} < 10mV
+\end{equation}
+
+\capequation{Distorsión por saturación}
+\begin{equation}
+    v_{ce} < |V_{CE_Q} - V_{CE_{SAT}}|
+\end{equation}
+
+\capequation{Distorsión por corte}
+\begin{equation}
+    v_{ce} < |V_{CC} - V_{CE_Q}|
+\end{equation}
+
+\subsection{Distorsiones para transistor MOSFET}
+
+Si se cumplen las siguientes condiciones el amplificador no distorsiona:
+
+\capequation{Distorsión por alinealidad}
+\begin{equation}
+    V_{gs} < 0,2\cdot|V_{GS} - V_T|
+\end{equation}
+
+\capequation{Distorsión por corte}
+\begin{equation}
+    V_{out} < I_{D_Q}\cdot R_D
+\end{equation}
+
+\capequation{Distorsión por triodo}
+\begin{equation}
+    v_{ds} < v_{ds(SAT)} = V_{GS} - V_T
+\end{equation}
+
+
+
+
+
