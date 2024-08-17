@@ -1,0 +1,58 @@
+\section{Diodos}
+
+\capequation{Caída de tensión en el diodo}
+\begin{equation}
+    V_D = V_A - V_K
+\end{equation}
+
+\capequation{Corriente en el diodo de juntura}
+\begin{equation}
+   I_D = I_S \cdot \left[\exp \left(\frac{V_D}{nV_{th}} \right)  - 1 \right]
+\end{equation}
+
+\capequation{Tensión térmica}
+\begin{equation}
+   V_{th} = \frac{kT}{q}
+\end{equation}
+
+\capequation{Regla de los $60mV$}
+\begin{equation}
+   I_D \times 10 = V_D + 60mV
+\end{equation}
+
+\subsection{Modelo de pequeña señal diodo}
+    
+\capequation{Caída de tensión en el diodo}
+\begin{equation}
+    v_D(t) = V_D + v_d(t)
+\end{equation}
+
+\capequation{Validez del MPS}
+\begin{equation*}
+    v_D < 10mV
+\end{equation*}
+
+\capequation{Corriente en el diodo}
+\begin{equation}
+    i_D(t)  = I_D + i_d(t)= I_D + \frac{I_D+I_S}{nVth} \cdot v_d(t)
+\end{equation}
+
+\capequation{Conductancia}
+\begin{equation}
+    g_D = \frac{\partial i_D}{\partial v_D} \Bigg|_Q = \frac{I_D + I_S}{nV_{th}} = \frac{1}{r_D}
+\end{equation}
+
+\capequation{Capacidad total del diodo}
+\begin{equation}
+    C_D = C_{d} + C_{j}
+\end{equation}
+
+\capequation{Capacidad de difusión}
+\begin{equation}
+    C_{d} = \frac{\tau_T \cdot I_D}{nV_{th}}
+\end{equation}
+
+\capequation{Capacidad de juntura}
+\begin{equation}
+    C_{j} = \frac{C_{j0}}{\sqrt{1 - \frac{V_D}{\phi_B}}}
+\end{equation}

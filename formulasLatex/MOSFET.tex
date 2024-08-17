@@ -1,0 +1,64 @@
+\section{MOSFET}
+\capequation{Relación entre tensiones}
+\begin{equation}
+    V_{DS_{(SAT)}} = V_{GS} - V_T 
+\end{equation}
+
+\capequation{Condiciones de polarización NMOS}
+
+\begin{equation*}
+    Saturacion\begin{cases}
+    V_{GS} > V_T \\
+    V_{DS} > V_{DS\;(SAT)} \\
+    I_D = \frac{1}{2}k'_n\frac{W}{L}\left[V_{DS\;(SAT)}\right]^2
+\end{cases}
+\end{equation*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\capequation{Condiciones de polarización PMOS}
+
+\begin{equation*}
+    Saturacion\begin{cases}
+    V_{GS} < V_T \\
+    V_{DS} < V_{DS\;(SAT)} \\
+    I_D = -\frac{1}{2}k'_p\frac{W}{L}\left[V_{DS\;(SAT)}\right]^2
+\end{cases}
+\end{equation*}
+
+\capequation{Efecto de modulación del largo del canal}
+\begin{equation}
+    I_D \cdot (1+\lambda V_{DS})
+\end{equation}
+
+\capequation{Relación tensión de early y EMLC}
+\begin{equation}
+    \lambda = \frac{1}{V_A}
+\end{equation}
+
+\capequation{Back-Gate NMOS}
+\begin{equation}
+    V_{T} = V_{T0} + \gamma{\left[\sqrt{\left(-2\phi_p - V_{BS}\right)} - \sqrt{\left( -2\phi_p\right)}  \right]} 
+\end{equation}
+
+\capequation{Back-Gate PMOS}
+\begin{equation}
+    V_{T} = V_{T0} - \gamma{\left[\sqrt{2\phi_n - V_{BS}} - \sqrt{2\phi_n}\right]} 
+\end{equation}
+
+\subsection{Modelo de pequeña señal MOSFET}
+
+\capequation{Validez del MPS}
+\begin{equation}
+    v_{gs} \leq 0,2\cdot(V_{GS} - V_T)
+\end{equation}
+
+\capequation{Transconductancia de salida}
+\begin{equation}
+    g_m = \frac{\partial i_D}{\partial v_{GS}} \Bigg|_Q = 2k(V_{GS} - V_T)
+\end{equation}
+
+
+\capequation{Conductancia de salida}
+\begin{equation}
+    g_o = \frac{\partial i_D}{\partial v_{DS}} \Bigg|_Q = \lambda \cdot I_{D_Q}
+\end{equation}
